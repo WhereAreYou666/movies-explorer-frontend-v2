@@ -1,0 +1,1 @@
+export const SHORT_DURATION = 40;

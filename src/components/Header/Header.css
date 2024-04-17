@@ -1,0 +1,142 @@
+.header {
+  display: flex;
+  width: 100%;
+  min-height: 74px;
+  background-color: rgba(32, 32, 32, 1);
+  margin: 0 auto;
+  padding: 0;
+  flex-direction: column;
+}
+
+.header__link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header_theme_main {
+  background-color: rgba(7, 48, 66, 1);
+}
+
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto 62px;
+  padding: 0;
+  max-width: 1280px;
+  position: relative;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  margin: 18px 0 0 70px;
+  padding: 0;
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.logo_type_auth {
+  margin: 0;
+}
+
+.logo:hover {
+  opacity: .8;
+}
+
+.header__auth-links {
+  width: 100%;
+  max-width: 183px;
+  margin: 0 70px 8px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header__register-link {
+  text-decoration: none;
+  margin: 29px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header__login-link {
+  text-decoration: none;
+  margin: 21px 0;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(61, 220, 132, 1);
+  width: 100%;
+  max-width: 76px;
+  min-height: 16px;
+  max-height: 16px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+@media (max-width: 991px) {
+  .header__content {
+    margin: 0 auto 46px;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+  .logo_type_auth {
+    margin-left: 0;
+  }
+
+  .header__auth-links {
+    margin-right: 30px;
+  }
+
+  .header__register-link {
+    margin-bottom: 0;
+  }
+
+  .header__login-link {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 491px) {
+  .logo {
+    margin-left: 14px;
+  }
+
+  .logo_type_auth {
+    margin-left: 0;
+  }
+
+  .header__auth-links {
+    margin-right: 14px;
+    gap: 14px;
+    max-width: 132px;
+  }
+
+  .header__register-link {
+    font-size: 10px;
+  }
+
+  .header__login-link {
+    font-size: 10px;
+    min-height: 16px;
+    max-height: 16px;
+    padding: 5px 0;
+    margin: 24px 0 0;
+  }
+
+  .header__content {
+    margin-bottom: 70px;
+  }
+}
