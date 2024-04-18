@@ -250,7 +250,6 @@ function App() {
       .then((res) => {
         setIsLoggedIn(false);
         navigate('/');
-        localStorage.clear();
         localStorage.removeItem('cards');
         localStorage.removeItem('input');
         localStorage.removeItem('checkbox');
