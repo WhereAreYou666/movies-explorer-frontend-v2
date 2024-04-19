@@ -1,0 +1,16 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts/fonts.css);
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(32, 32, 32, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  min-width: 320px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

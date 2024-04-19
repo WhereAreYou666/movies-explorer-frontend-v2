@@ -1,0 +1,245 @@
+.navigation__menu {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-button {
+  display: none;
+}
+
+.navigation__menu-links {
+  display: flex;
+  gap: 20px;
+  max-width: 252px;
+  min-height: 18px;
+  list-style-type: none;
+  margin: 28px 0;
+  padding: 0;
+}
+
+.navigation__menu-link-row_type_burger-menu {
+  display: none;
+}
+
+.navigation__menu-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.navigation__menu-link:hover {
+  opacity: .7;
+}
+
+.navigation__menu-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.78px;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.navigation__profile-button {
+  display: flex;
+  align-content: space-between;
+  gap: 13px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 15px 70px 23px 0;
+  padding: 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.navigation__profile-button:hover {
+  opacity: .7;
+}
+
+.navigation__profile-logo {
+  background-image: url(../../images/logo-profile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(49, 49, 49, 1);
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.navigation__profile-logo_theme_mainpage {
+  background-color: rgba(15, 65, 87, 1);
+}
+
+.navigation__menu-close-button {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  border: none;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__menu-link_type_active {
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .navigation__profile-button {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .navigation_type_overlay {
+    visibility: visible;
+    width: 100%;
+    max-width: 768px;
+    height: 100vh;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  .navigation__menu {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: absolute;
+    transition: width .2s linear;
+  }
+
+  .menu-button {
+    display: block;
+    margin: 15px 30px 15px 0;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background: url(../../images/burger-menu-icon.svg) no-repeat center / cover;
+    border: none;
+    opacity: 1;
+    transition: opacity .5s linear;
+    outline: none;
+  }
+
+  .menu-button:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+
+  .navigation__menu_type_active {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 520px;
+    background-color: rgba(32, 32, 32, 1);
+    z-index: 100;
+    gap: 0;
+  }
+
+  .navigation__menu-links {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 2;
+    margin: 87px auto 0;
+    padding: 0;
+    gap: 27px;
+  }
+
+  .navigation__menu-links_type_active {
+    display: flex;
+  }
+
+  .navigation__menu-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+
+  .navigation__menu-link-row {
+    text-align: center;
+  }
+
+  .navigation__menu-link-row_type_burger-menu {
+    display: inline-flex;
+    align-self: center;
+  }
+
+  .navigation__menu-link_type_active {
+    display: inline-flex;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+  }
+
+  .navigation__profile-button {
+    display: none;
+    margin: 0 auto 86px;
+    flex-shrink: 0;
+  }
+
+  .navigation__profile-button_type_active {
+    display: flex;
+  }
+
+  .navigation__menu-close-button_type_active {
+    visibility: visible;
+    align-self: flex-end;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/close-menu-button.svg) no-repeat center / cover;
+    margin: 22px;
+    border: none;
+    opacity: 1;
+    transition: opacity .5s linear;
+  }
+
+  .navigation__menu-close-button_type_active:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
+
+@media (max-width: 491px) {
+  .navigation__menu-links {
+    gap: 23px;
+  }
+
+  .navigation__profile-button {
+    margin-bottom: 42px;
+  }
+
+  .menu-button {
+    width: 22px;
+    height: 40px;
+    margin: 17px 23px 17px 0;
+  }
+
+  .navigation__menu-close-button_type_active {
+    width: 24px;
+    height: 24px;
+    margin: 18px;
+  }
+}

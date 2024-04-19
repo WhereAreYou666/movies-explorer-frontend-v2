@@ -1,0 +1,95 @@
+.not-found-error {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 1);
+  min-height: 100vh;
+}
+
+.not-found-error__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 58px 0 0;
+}
+
+.not-found-error__title {
+  text-align: center;
+  margin: 3px 0 4px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169.43px;
+}
+
+.not-found-error__text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.not-found-error__button {
+  background-color: inherit;
+  border: none;
+  align-self: center;
+  margin: 0 0 60px;
+  padding: 0;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: rgba(66, 133, 244, 1);
+  transition: color .5s linear;
+  flex-shrink: 0;
+}
+
+.not-found-error__button:hover {
+  color: rgba(66, 133, 244, .7);
+}
+
+@media (max-width: 991px) {
+  .not-found-error__content {
+    margin: 34px 0 0;
+    flex: 2;
+    justify-content: end;
+  }
+
+  .not-found-error__button {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 34px;
+    flex: 2;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 491px) {
+  .not-found-error__content {
+    margin-top: 45px;
+  }
+
+  .not-found-error__title {
+    font-size: 80px;
+    line-height: 96.82px;
+    margin: 0 0 10px;
+  }
+
+  .not-found-error__text {
+    font-size: 12px;
+    line-height: 14.52px;
+    margin: 0;
+  }
+
+  .not-found-error__button {
+    font-size: 12px;
+    line-height: 14.52px;
+    justify-content: end;
+    margin-bottom: 29px;
+  }
+}
