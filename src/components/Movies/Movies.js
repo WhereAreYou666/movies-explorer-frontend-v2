@@ -24,7 +24,7 @@ function Movies(props) {
   const handleChangeScreenWidth = React.useEffect(() => {
 
     if (next === 0) {
-      setNumVisDesktop(12);
+      setNumVisDesktop(11);
       setNumVisTab(7);
       setNumVisMob(4);
     }
