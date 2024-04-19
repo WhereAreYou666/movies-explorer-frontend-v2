@@ -17,40 +17,31 @@ function Movies(props) {
   const [isMobile, setIsMobile] = React.useState(false);
   const [visibleCards, setVisibleCards] = React.useState(JSON.parse(localStorage.getItem('visible-cards')));
   const { isScreenLg, isScreenMd, isScreenSm } = useResize();
-  const [numVisDesktop, setNumVisDesktop] = React.useState(JSON.parse(localStorage.getItem('visible-cards-desktop')));
-  const [numVisTab, setNumVisTab] = React.useState(JSON.parse(localStorage.getItem('visible-cards-tab')));
-  const [numVisMob, setNumVisMob] = React.useState(JSON.parse(localStorage.getItem('visible-cards-mobile')));
+  const [numVisDesktop, setNumVisDesktop] = React.useState(11);
+  const [numVisTab, setNumVisTab] = React.useState(7);
+  const [numVisMob, setNumVisMob] = React.useState(4);
 
   const handleChangeScreenWidth = React.useEffect(() => {
 
     if (next === 0) {
-      setNumVisDesktop(11);
+      setNumVisDesktop(12);
       setNumVisTab(7);
       setNumVisMob(4);
-      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
-      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
-      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
     if (isScreenLg && next !== null && visibleCards > 10) {
       setNumVisTab(numVisDesktop);
       setNumVisMob(numVisDesktop);
-      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
-      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
     if (isScreenMd && !isScreenSm && next !== null && visibleCards > 8) {
       setNumVisDesktop(numVisTab);
       setNumVisMob(numVisTab);
-      localStorage.setItem('visible-cards-mobile', JSON.stringify(numVisMob));
-      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
     }
 
     if (isScreenSm && next !== null && visibleCards > 5) {
       setNumVisTab(numVisMob);
       setNumVisDesktop(numVisMob);
-      localStorage.setItem('visible-cards-desktop', JSON.stringify(numVisDesktop));
-      localStorage.setItem('visible-cards-tab', JSON.stringify(numVisTab));
     }
 
     if (isScreenLg) {
@@ -83,9 +74,7 @@ function Movies(props) {
     let step;
     if (isDesktop) {
       step = 3;
-    } else if (isTab) {
-      step = 2;
-    } else if (isMobile) {
+    } else if (isTab || isMobile) {
       step = 2;
     }
     setNext(next + step);
@@ -120,6 +109,7 @@ function Movies(props) {
           setNext={setNext}
           movies={true}
           setVisibleCards={setVisibleCards}
+          visibleCards={visibleCards}
         />
 
         <MoviesCardList>
@@ -139,6 +129,7 @@ function Movies(props) {
                       index={index}
                       link={`https://api.nomoreparties.co/${card.image.url}`}
                       savedCards={props.savedCards}
+                      setVisibleCards={setVisibleCards}
                       visibleCards={visibleCards}
                       movies={true}
                     />
