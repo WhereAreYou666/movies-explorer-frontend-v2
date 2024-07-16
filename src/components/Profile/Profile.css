@@ -1,0 +1,235 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 1);
+}
+
+.profile__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 410px;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.profile__form-title {
+  margin: 4px 0 107px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29.05px;
+  text-align: center;
+}
+
+.profile__form-rows {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.profile__form-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(66, 66, 66, 1);
+}
+
+.profile__form-row:last-of-type {
+  border-bottom: none;
+}
+
+.profile__form-label,
+.profile__form-input {
+  width: 100%;
+  font-size: 11px;
+  line-height: 13.31px;
+}
+
+.profile__form-label {
+  max-width: 141px;
+  font-weight: 500;
+}
+
+.profile__form-input {
+  max-width: 122px;
+  font-weight: 400;
+  text-align: end;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  background-color: rgba(32, 32, 32, 1);
+  outline: none;
+  border-radius: 3px;
+  transition: background-color .5s linear, outline .5s linear, color .5s linear;
+}
+
+.profile__form-input_type_active:focus {
+  background-color: rgba(80, 80, 80, 1);
+  outline: 1px solid rgba(170, 170, 170, 1);
+}
+
+.profile__form-input_type_active:hover {
+  color: rgba(255, 255, 255, .6);
+}
+
+.profile__form-buttons {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0 0 10vh;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  max-width: 410px;
+}
+
+.profile__edit-button {
+  border: none;
+  background-color: rgba(32, 32, 32, 1);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 0 16px;
+  padding: 0;
+  transition: color .5s linear;
+}
+
+.profile__edit-button:hover {
+  color: rgba(255, 255, 255, .7);
+  cursor: pointer;
+}
+
+.profile__edit-button_type_inactive {
+  display: none;
+}
+
+.profile__escape-button {
+  border: none;
+  background-color: rgba(32, 32, 32, 1);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15.73px;
+  color: rgba(238, 52, 101, 1);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  transition: color .5s linear;
+}
+
+.profile__escape-button:hover {
+  color: rgba(238, 52, 101, .7);
+  cursor: pointer;
+}
+
+.profile__escape-button_type_inactive {
+  display: none;
+}
+
+.profile__submit-button {
+  display: block;
+  width: 100%;
+  max-width: 410px;
+  min-height: 45px;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(52, 86, 243, 1);
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  transition: opacity .5s linear, background-color .5s linear;
+}
+
+.profile__submit-button_type_active {
+  display: none;
+}
+
+.profile__submit-button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.profile__submit-button_type_error {
+  background-color: rgba(248, 248, 248, 1);
+  color: rgba(194, 194, 194, 1);
+  transition: background-color .5s linear;
+}
+
+.profile__submit-button_type_error:hover {
+  cursor: default;
+  opacity: 1;
+}
+
+.profile__error-text {
+  visibility: hidden;
+  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  text-align: center;
+}
+
+.profile__error-text_color_red {
+  visibility: visible;
+  color: rgba(255, 0, 76, 1);
+}
+
+.profile__error-text_color_green {
+  visibility: visible;
+  color: rgba(0, 255, 0, 1);
+}
+
+@media (max-width: 991px) {
+  .profile__form {
+    justify-content: center;
+  }
+
+  .profile__form-rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .profile__form-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 31px 0 83px;
+    flex: 1;
+  }
+
+  .profile__form-buttons {
+    flex: 1.69;
+    margin: 0;
+  }
+
+  .profile__submit-button {
+    margin-top: 2.44px;
+  }
+}
+
+@media (max-width: 491px) {
+
+  .profile__form {
+    max-width: 260px;
+    justify-content: start;
+  }
+
+  .profile__form-title {
+    margin: 0 0 63px;
+    max-width: 260px;
+    flex: 0;
+  }
+
+  .profile__form-buttons {
+    margin-bottom: 40px;
+    max-width: 260px;
+    flex: 0;
+  }
+}

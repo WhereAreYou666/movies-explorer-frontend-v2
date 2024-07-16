@@ -1,0 +1,123 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 1);
+}
+
+.portfolio__title {
+  margin: 0 70px 30px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: rgba(139, 139, 139, 1);
+}
+
+.portfolio__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 70px;
+  list-style-type: none;
+}
+
+.portfolio__list-item:last-child {
+  margin-bottom: 110px;
+}
+
+.portfolio__link {
+  display: flex;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(66, 66, 66, 1);
+  padding: 0 0 19px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  opacity: 1;
+  transition: border-bottom .5s linear, opacity .5s linear;
+}
+
+.portfolio__link:hover {
+  opacity: .7;
+}
+
+.portfolio__list-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1140px;
+  margin: 20px 0 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+.portfolio__list-title::after {
+  content: "";
+  display: flex;
+  align-self: center;
+  width: 100%;
+  max-width: 20px;
+  min-height: 17px;
+  margin: 7px 6px 0 0;
+  padding: 0;
+  background: url(../../images/link-arrow.svg) no-repeat center / cover;
+}
+
+@media (max-width: 991px) {
+  .portfolio__title {
+    margin: 0 50px 30px;
+  }
+
+  .portfolio__list {
+    margin: 0 50px;
+  }
+
+  .portfolio__list-title {
+    font-size: 28px;
+  }
+
+  .portfolio__list-image {
+    max-width: 17px;
+  }
+
+  .portfolio__list-item:last-child {
+    margin-bottom: 68px;
+  }
+}
+
+@media (max-width: 680px) {
+  .portfolio__list-title {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -.7px;
+  }
+}
+
+@media (max-width: 491px) {
+  .portfolio__title {
+    margin: 0 14px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .portfolio__list {
+    margin: 0 14px;
+  }
+
+  .portfolio__list-title::after {
+    margin: 0 6px 0 0;
+    max-width: 11px;
+    min-height: 11px;
+  }
+
+  .portfolio__list-item:last-child {
+    margin-bottom: 55px;
+  }
+}
